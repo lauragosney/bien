@@ -14,24 +14,43 @@ $white: #ffffff;
 $titleFont: "Pt Serif";
 $bodyFont: "Roboto";
 
+$font-size-links-px: 13px;
+$font-size-score-px:24px;
+
+$line-height-px: 1.5;
+
+$font-weight-bold: 800;
+$font-weight-regular: 400;
+$font-weight-light: 200;
+
+header h1 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+header img {
+  width:70%;
+}
+
 
 .score {
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: 600;
+  font-size: $font-size-score-px;
+  line-height: $line-height-px;
+  font-weight: $font-weight-regular;
 }
 
 .actions {
   margin-top:40px;
-  margin-bottom: 40px;
+  margin-bottom:40px;
 }
 
 .actions a {
-  font-size:13px;
-  color: $white;
-  background-color: $orange;
-  padding: 10px 20px 10px 20px;
-  border-radius: 2px;
-  margin-right:10px;
-  margin-left:10px;
+  font-size: $font-size-links-px;
+  line-height:$line-height-px;
+  font-weight:$font-weight-bold;
+  color: $orange;
+  padding: 2px;
+  border-bottom: solid 1px $orange;
+  margin-left: 10px;
+  margin-right: 10px;
 }

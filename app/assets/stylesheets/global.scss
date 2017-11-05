@@ -5,21 +5,36 @@ $purple: #31234E;
 $orange: #FF551A;
 $black: #1e1e1e;
 $white: #ffffff;
+$grey: #f7f7f7;
 
 
 $titleFont: "Pt Serif";
 $bodyFont: "Roboto";
 
+$font-size-h1-px:60px;
+$font-size-h2-px:48px;
+$font-size-h3-px:36px;
+$font-size-score-px:24px;
+$font-size-body-px: 14px;
+$font-size-links-px: 13px;
+
+$line-height-px: 1.5;
+
+$font-weight-bold: 800;
+$font-weight-regular: 400;
+$font-weight-light: 200;
+
 
 body {
   color: $black;
   font-family: $bodyFont;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: $font-size-body-px;
+  line-height: $line-height-px;
   max-width: 1280px;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
+  background-color: $grey;
 }
 
 
@@ -32,7 +47,8 @@ header {
 
 
 nav a {
-  font-size:13px;
+  font-size: $font-size-body-px;
+  line-height:$line-height-px;
   color: $white;
   background-color: $orange;
   padding: 10px 20px 10px 20px;
@@ -41,20 +57,49 @@ nav a {
 
 
 h1 {
-  color: $black;
-  font-size:36px;
-  line-height:1.5;
+  color: $orange;
+  font-size:$font-size-h1-px;
+  line-height:$line-height-px;
   font-family: $titleFont;
 }
 
 h2 {
   color: $black;
+  font-size:$font-size-h2-px;
+  line-height:$line-height-px;
   font-family: $titleFont;
 }
 
+h3 {
+  color: $black;
+  font-size:$font-size-h3-px;
+  line-height:$line-height-px;
+  font-family: $titleFont;
+}
 
 a {
   color: $black;
+  font-size: $font-size-body-px;
+  line-height:$line-height-px;
   text-decoration: none;
-  font-weight:200;
+  font-weight:$font-weight-light;
+}
+
+div.review {
+  background-color: $white;
+  padding:40px 20px 40px 20px;
+  margin:40px;
+  text-align: left;
+}
+
+.container {
+  width: 960px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color: $white;
+  padding:20px;
+}
+
+footer {
+  margin-top: 50px
 }
