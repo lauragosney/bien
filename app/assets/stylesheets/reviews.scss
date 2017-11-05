@@ -1,3 +1,37 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$green: #3BC8AA;
+$yellow: #FFECCF;
+$pink: #FFC6C6;
+$purple: #31234E;
+$orange: #FF551A;
+$black: #1e1e1e;
+$white: #ffffff;
+
+
+$titleFont: "Pt Serif";
+$bodyFont: "Roboto";
+
+
+.score {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top:40px;
+  margin-bottom: 40px;
+}
+
+.actions a {
+  font-size:13px;
+  color: $white;
+  background-color: $orange;
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  margin-right:10px;
+  margin-left:10px;
+}

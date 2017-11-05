@@ -1,22 +1,60 @@
 $green: #3BC8AA;
+$yellow: #FFECCF;
+$pink: #FFC6C6;
+$purple: #31234E;
 $orange: #FF551A;
 $black: #1e1e1e;
+$white: #ffffff;
 
 
 $titleFont: "Pt Serif";
-$bodyFont: "Work Sans";
+$bodyFont: "Roboto";
+
 
 body {
   color: $black;
   font-family: $bodyFont;
+  font-size: 13px;
+  line-height: 19px;
+  max-width: 1280px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
 }
 
+
+header {
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+nav a {
+  font-size:13px;
+  color: $white;
+  background-color: $orange;
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+}
+
+
 h1 {
-  color: $green;
+  color: $black;
+  font-size:36px;
+  line-height:1.5;
   font-family: $titleFont;
 }
 
 h2 {
-  color: $green;
+  color: $black;
   font-family: $titleFont;
+}
+
+
+a {
+  color: $black;
+  text-decoration: none;
+  font-weight:200;
 }
