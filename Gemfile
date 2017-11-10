@@ -34,6 +34,15 @@ gem 'jbuilder', '~> 2.5'
 # add in our geocoding
 gem "geocoder"
 
+# make our forms nice and easy
+gem 'simple_form'
+
+# make our filters active
+gem 'active_link_to'
+
+# profanity filter
+gem 'profanity_filter'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
