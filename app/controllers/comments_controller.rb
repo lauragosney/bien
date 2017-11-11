@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
 
     @comment.save
 
+
     # go back to the review show page
     redirect_to review_path(@review)
 
