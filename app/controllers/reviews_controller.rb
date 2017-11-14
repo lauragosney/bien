@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
 
+  # check if logged in
+  before_action :check_login, except: [:index, :show]
+
   def index
     #this is our list page for our reviews
     @price = params[:price]
@@ -37,6 +40,9 @@ class ReviewsController < ApplicationController
     # take info from the form and add it to the model
     @review = Review.new(form_params)
 
+    # and then associate it with a user
+    @review.user = @current_user
+
     # we want to check if the model can be saved
     # if it is, we're going to the homepage again
     # if it is'nt, show the new review form
@@ -59,8 +65,10 @@ class ReviewsController < ApplicationController
     # find the individual review
     @review = Review.find(params[:id])
 
-    # destroy
-    @review.destroy
+    # destroy if they have access
+    if @review.user == @current_user
+      @review.destroy
+    end
 
     # redirect to the homepage
     redirect_to root_path
@@ -72,6 +80,9 @@ class ReviewsController < ApplicationController
     # find individual review to edit
     @review = Review.find(params[:id])
 
+    if @review.user != @current_user
+      redirect_to root_path
+    end
   end
 
 
@@ -80,20 +91,23 @@ class ReviewsController < ApplicationController
     # find the individual review
     @review = Review.find(params[:id])
 
-    # update with the new information from the form
-    if @review.update(form_params)
 
-
-    # redirect somewhere new
-    redirect_to review_path(@review)
+    if @review.user != @current_user
+      redirect_to root_path
     else
-      render "edit"
-    end
+      # update with the new information from the form
+      if @review.update(form_params)
 
+        # redirect somewhere new
+        redirect_to review_path(@review)
+      else
+        render "edit"
+      end
+    end
   end
 
   def form_params
-  params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance, :cuisine, :price, :address)
+    params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance, :cuisine, :price, :address)
   end
 
 end

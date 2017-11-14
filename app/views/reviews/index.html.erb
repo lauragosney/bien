@@ -1,7 +1,7 @@
 <% content_for :page_title, "Homepage" %>
 
 <nav class="filters">
-  <%= active_link_to "All prices", root_path, active: { price: nil, cuisine: nil, location: nil } %>
+  <%= active_link_to "All restaurants", root_path, active: { price: nil, cuisine: nil, location: nil } %>
 
   <div>
     <%= active_link_to "$", root_path(price: 1, cuisine: @cuisine, location: @location), active: { price: 1 } %>
