@@ -52,6 +52,11 @@ gem 'active_link_to'
 # profanity filter
 gem 'profanity_filter'
 
+
+# lets add uploading files
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

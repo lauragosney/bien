@@ -82,6 +82,9 @@ class ReviewsController < ApplicationController
 
     if @review.user != @current_user
       redirect_to root_path
+    elsif @review.created_at < 5.hour.ago
+      # a longer time ago
+      redirect_to review_path(@review)
     end
   end
 
@@ -107,7 +110,7 @@ class ReviewsController < ApplicationController
   end
 
   def form_params
-    params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance, :cuisine, :price, :address)
+    params.require(:review).permit(:title, :restaurant, :body, :score, :ambiance, :cuisine, :price, :address, :photo)
   end
 
 end
