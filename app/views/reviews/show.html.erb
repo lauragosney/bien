@@ -69,7 +69,7 @@
   <% if @review.user == @current_user %>
 
     <div class="actions">
-      <% if @review.created_at > 1.hour.ago %>
+      <% if @review.created_at > 1.month.ago %>
         <%= link_to "Edit this review", edit_review_path(@review) %>
       <% end %>
         <%= link_to "Delete this review", review_path(@review), method: :delete, data: {confirm: "Are you sure??"} %>
