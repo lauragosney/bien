@@ -1,9 +1,8 @@
-ActiveAdmin.register Review do
+ActiveAdmin.register Page do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params  :title, :restaurant, :body, :score, :ambiance, :cuisine, :price, :address, :photo, :user_id, :is_featured
-
+permit_params :title, :body, :url, :image
 #
 # or
 #
