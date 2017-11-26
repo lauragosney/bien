@@ -9,6 +9,9 @@ class User < ApplicationRecord
   validates :username, presence:true, uniqueness:true
   validates :email, presence:true, uniqueness:true
 
+  # add the avatar uploader
+  mount_uploader :avatar, AvatarUploader
+
   def to_param
     username
   end

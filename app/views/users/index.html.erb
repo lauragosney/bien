@@ -1,9 +1,27 @@
 <h2> All users </h2>
 
-<% @users.each do |user| %>
+<section class="users">
 
-  <p>
-    <%= user.username %> (<%= user.email %>)
-  </p>
+
+  <% @users.each do |user| %>
+
+
+  <div class="user">
+
+    <div class="user-image">
+
+      <%= image_tag user.avatar ,:class=> "img-circular" %>
+    </div>
+
+    <div class="user-details">
+
+      <p>
+        <%= user.username %> (<%= user.email %>)
+      </p>
+
+    </div>
+
+</div>
 
 <% end %>
+</section>

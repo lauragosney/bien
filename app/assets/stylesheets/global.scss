@@ -80,6 +80,27 @@ label {
   display: block;
 }
 
+.img-circular {
+  border-radius: 50%;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, .1)
+}
+
+section.users {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user {
+  width: 30%;
+  padding: 20px;
+  margin: 20px;
+  background-color: $grey;
+}
+
+
+
 input, textarea {
   font-size: $font-size-body-px;
   min-width:400px;
