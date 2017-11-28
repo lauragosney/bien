@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
 
     @comment.save
 
+    flash[:success] = "Your comment was posted!"
 
     # go back to the review show page
     redirect_to review_path(@review)

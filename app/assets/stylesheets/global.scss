@@ -95,7 +95,7 @@ section.users {
 .user {
   width: 30%;
   padding: 20px;
-  margin: 20px;
+  margin: 20px 20px 20px 0;
   background-color: $grey;
 }
 
@@ -148,4 +148,10 @@ nav.filters {
     font-size: $font-size-links-px;
     margin: 4px 5px;
   }
+}
+
+.success {
+  background: $green;
+  color: white;
+  padding: 10px 30px 10px 30px;
 }

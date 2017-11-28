@@ -1,0 +1,13 @@
+<h3>Edit your profile!</h3>
+
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :username %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.input :avatar %>
+
+  <%= f.button :submit, "Sign up" %>
+
+<% end %>

@@ -27,12 +27,16 @@ class UsersController < ApplicationController
       # save the session with the user
       session[:user_id] = @user.id
 
+      flash[:success] = "Welcome to Bien!"
+
       redirect_to users_path
     else
       render "new"
     end
 
   end
+
+
 
   def form_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation, :avatar)
